@@ -61,7 +61,7 @@ function Message({ msg }) {
 
 export default function AgentChat() {
   const [messages, setMessages] = useState([
-    { role: 'ai', text: "Hey there! I'm Alex's AI assistant. Ask me anything about his skills, projects, or experience!" }
+    { role: 'ai', text: "Hey there! I'm Younes's AI assistant. Ask me anything about his skills, projects, or experience!" }
   ])
   const [input, setInput] = useState('')
   const [loading, setLoading] = useState(false)
