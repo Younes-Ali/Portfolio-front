@@ -1,0 +1,97 @@
+@import "tailwindcss";
+@plugin "daisyui";
+
+/* Fonts */
+@theme {
+  
+    --font-syne: 'Syne', sans-serif;
+    --font-dm: 'DM Sans', sans-serif;
+
+    --color-gold: #F59E0B;
+    --color-gold2: #FBBF24;
+    --color-coral: #F97316;
+    --color-rose: #FB7185;
+    --color-bg: #0D0A06;
+    --color-bg2: #120E08;
+    --color-muted: #A8967A;
+
+}
+
+/* Custom utilities */
+@layer utilities {
+  .font-syne {
+    font-family: var(--font-syne);
+  }
+
+  .font-dm {
+    font-family: var(--font-dm);
+  }
+
+  .bg-bg {
+    background-color: var(--color-bg);
+  }
+
+  .bg-bg2 {
+    background-color: var(--color-bg2);
+  }
+
+  .text-gold {
+    color: var(--color-gold);
+  }
+
+  .text-muted {
+    color: var(--color-muted);
+  }
+  .bg-gold {
+    background: var(--color-gold);
+  }
+  
+}
+
+/* Animations */
+@layer utilities {
+  .animate-float {
+    animation: float 4s ease-in-out infinite;
+  }
+
+  .animate-float-delay {
+    animation: float 4s 2s ease-in-out infinite;
+  }
+
+  .animate-rotate-ring {
+    animation: rotateRing 12s linear infinite;
+  }
+
+  .animate-rotate-ring-reverse {
+    animation: rotateRing 20s linear infinite reverse;
+  }
+
+  .animate-pulse-dot {
+    animation: pulseDot 2s ease infinite;
+  }
+
+  .animate-icon-pulse {
+    animation: iconPulse 3s ease-in-out infinite;
+  }
+}
+
+/* Keyframes */
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-8px); }
+}
+
+@keyframes rotateRing {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+@keyframes pulseDot {
+  0%, 100% { opacity: 1; box-shadow: 0 0 0 0 rgba(245,158,11,0.5); }
+  50% { opacity: 0.6; box-shadow: 0 0 0 5px rgba(245,158,11,0); }
+}
+
+@keyframes iconPulse {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.07); }
+}
